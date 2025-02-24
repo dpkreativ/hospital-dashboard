@@ -11,7 +11,7 @@ const PatientList = ({ patients }: { patients: Patient[] }) => {
   const router = useRouter();
 
   const handlePatientClick = (id: string) => {
-    router.push(`/patient/${id}`);
+    router.push(`/dashboard/patient/${id}`);
   };
 
   return (
@@ -29,7 +29,7 @@ const PatientList = ({ patients }: { patients: Patient[] }) => {
             //     ? "flex justify-between gap-x-6 p-5 items-center bg-gray-200"
             //     : "flex justify-between gap-x-6 p-5 items-center"
             // }
-            className="flex justify-between gap-x-6 p-5 items-center"
+            className="flex justify-between gap-x-6 p-5 items-center hover:bg-gray-200 cursor-pointer"
             onClick={() =>
               handlePatientClick(patient.name.split(" ").join("-"))
             }
