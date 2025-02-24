@@ -1,10 +1,19 @@
+"use client";
+
 import SearchIcon from "./icons/SearchIcon";
 import MenuIcon from "./icons/MenuIcon";
 
 // import { patients } from "./utils/patientsMockData";
 import { Patient } from "@/lib/services/PatientsTypes";
+import { useRouter } from "next/navigation";
 
 const PatientList = ({ patients }: { patients: Patient[] }) => {
+  const router = useRouter();
+
+  const handlePatientClick = (id: string) => {
+    router.push(`/patient/${id}`);
+  };
+
   return (
     <ul role="list" className="rounded-3xl bg-white divide-y divide-gray-100">
       <li className="flex justify-between items-center gap-x-6 p-5">
@@ -21,6 +30,9 @@ const PatientList = ({ patients }: { patients: Patient[] }) => {
             //     : "flex justify-between gap-x-6 p-5 items-center"
             // }
             className="flex justify-between gap-x-6 p-5 items-center"
+            onClick={() =>
+              handlePatientClick(patient.name.split(" ").join("-"))
+            }
           >
             <div className="flex min-w-0 gap-x-4">
               <img
