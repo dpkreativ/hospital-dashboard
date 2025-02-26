@@ -1,8 +1,8 @@
 import { formatDate } from "@/lib/utils";
-import CalendarTodayIcon from "./icons/CalendarIcon";
-import FemaleIcon from "./icons/FemaleIcon";
-import InsuranceIcon from "./icons/InsuranceIcon";
-import PhoneIcon from "./icons/PhoneIcon";
+import CalendarTodayIcon from "../icons/CalendarIcon";
+import FemaleIcon from "../icons/FemaleIcon";
+import InsuranceIcon from "../icons/InsuranceIcon";
+import PhoneIcon from "../icons/PhoneIcon";
 import type { PatientProfile } from "@/lib/services/PatientsTypes";
 
 const PatientProfile = ({ patient }: { patient: PatientProfile }) => {

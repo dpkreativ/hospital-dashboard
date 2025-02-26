@@ -11,9 +11,9 @@ import {
   Legend,
 } from "chart.js";
 import { Line } from "react-chartjs-2";
-import ExpandMoreIcon from "./icons/ExpandMore";
-import ArrowUpIcon from "./icons/ArrowUp";
-import ArrowDownIcon from "./icons/ArrowDown";
+import ExpandMoreIcon from "../icons/ExpandMore";
+import ArrowUpIcon from "../icons/ArrowUp";
+import ArrowDownIcon from "../icons/ArrowDown";
 
 ChartJS.register(
   CategoryScale,

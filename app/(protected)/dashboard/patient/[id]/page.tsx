@@ -1,9 +1,9 @@
 "use client";
 
-import DiagnosisHistory from "@/components/DiagnosisHistory";
-import DiagnosticList from "@/components/DiagnosticList";
-import LabResultsList from "@/components/LabResultList";
-import PatientProfile from "@/components/PatientProfile";
+import DiagnosisHistory from "@/components/shared/DiagnosisHistory";
+import DiagnosticList from "@/components/shared/DiagnosticList";
+import LabResultsList from "@/components/shared/LabResultList";
+import PatientProfile from "@/components/shared/PatientProfile";
 import getAllPatients from "@/lib/services/Patients";
 import {
   DiagnosisHistory as DHistory,

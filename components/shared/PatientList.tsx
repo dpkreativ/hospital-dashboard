@@ -1,7 +1,7 @@
 "use client";
 
-import SearchIcon from "./icons/SearchIcon";
-import MenuIcon from "./icons/MenuIcon";
+import SearchIcon from "../icons/SearchIcon";
+import MenuIcon from "../icons/MenuIcon";
 
 // import { patients } from "./utils/patientsMockData";
 import { Patient } from "@/lib/services/PatientsTypes";
