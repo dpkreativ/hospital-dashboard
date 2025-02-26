@@ -1,3 +1,11 @@
+import PatientList from "@/components/PatientList";
+import getAllPatients from "@/lib/services/Patients";
+
 export default async function Dashboard() {
-  return <main className="flex gap-5">{/* Diagnosis */}</main>;
+  const initialData = await getAllPatients();
+  return (
+    <>
+      <PatientList patients={initialData} />
+    </>
+  );
 }

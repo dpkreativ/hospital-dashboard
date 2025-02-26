@@ -9,8 +9,9 @@ import {
   DiagnosisHistory as DHistory,
   Diagnostic,
   Patient,
-  //   PatientProfile as PProfile,
 } from "@/lib/services/PatientsTypes";
+import { ArrowBigLeft, ArrowLeft } from "lucide-react";
+import Link from "next/link";
 import { useParams } from "next/navigation";
 import { useEffect, useState } from "react";
 
@@ -34,7 +35,6 @@ export default function PatientPage() {
     }
   }, [id]);
 
-  let profile!: PatientProfile;
   let diagnosisHistory!: DHistory[];
   let diagnosticList!: Diagnostic[];
   let labResults!: Array<string>;
@@ -51,15 +51,24 @@ export default function PatientPage() {
 
   return (
     <>
-      <section className="w-full">
-        <DiagnosisHistory diagnosisHistory={diagnosisHistory} />
-        <DiagnosticList diagnostics={diagnosticList} />
-      </section>
+      <nav className="mb-4">
+        <Link href="/dashboard" className="flex gap-2 items-center">
+          <ArrowLeft />
+          <span>See all patients</span>
+        </Link>
+      </nav>
 
-      {/* Profile & Lab Results */}
-      <section className="w-full max-w-96">
-        <PatientProfile patient={patient} />
-        <LabResultsList labResults={labResults} />
+      <section className="grid md:flex gap-4">
+        {/* Profile & Lab Results */}
+        <div className="w-full max-w-96 grid gap-4">
+          <PatientProfile patient={patient} />
+          <LabResultsList labResults={labResults} />
+        </div>
+
+        <div className="w-full grid gap-4">
+          <DiagnosisHistory diagnosisHistory={diagnosisHistory} />
+          <DiagnosticList diagnostics={diagnosticList} />
+        </div>
       </section>
     </>
   );

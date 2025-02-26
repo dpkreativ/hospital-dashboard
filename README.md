@@ -1,1 +1,1 @@
-# Hospital Admin Dashboard
+# VitalTrack
