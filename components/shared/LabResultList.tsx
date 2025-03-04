@@ -19,20 +19,23 @@ const LabResultsList = ({ labResults }: { labResults: Array<string> }) => {
             key={index}
             className={
               result.isActive
-                ? "flex justify-between gap-x-6 p-5 items-center bg-gray-200"
+                ? "flex justify-between gap-x-6 p-5 items-center bg-gray-100 rounded-3xl"
                 : "flex justify-between gap-x-6 p-5 items-center"
             }
           >
-            <div className="flex min-w-0 gap-x-4">
+            <a href="/somatosensory.pdf" className="flex min-w-0 gap-x-4">
               <div className="min-w-0 flex-auto">
                 <p className="text-sm font=light leading-6 text-gray-900">
                   {result.result}
                 </p>
               </div>
-            </div>
-            <div className="shrink-0 sm:flex sm:flex-col sm:items-center">
+            </a>
+            <a
+              href="/somatosensory.pdf"
+              className="shrink-0 sm:flex sm:flex-col sm:items-center hover:bg-red-200 p-4 rounded-full"
+            >
               <DownloadIcon />
-            </div>
+            </a>
           </li>
         );
       })}
